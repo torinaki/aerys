@@ -81,6 +81,11 @@ $climate->arguments->add([
         "longPrefix"   => "restart",
         "description"  => "Gracefully restart the workers",
         "noValue"      => true,
+    ],
+    "worker-args" => [
+        "longPrefix"   => "worker-args",
+        "description"  => "Add additional PHP options for workers",
+        "defaultValue" => "",
     ]
 ]);
 

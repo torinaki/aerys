@@ -393,6 +393,10 @@ class WatcherProcess extends Process {
             $parts[] = $ini;
         }
 
+        if ($console->isArgDefined("worker-args")) {
+            $parts = array_merge($parts, explode(' ', $console->getArg("worker-args")));
+        }
+
         $parts[] = "-d";
         $parts[] = "zend.assertions=" . ini_get("zend.assertions");
 
